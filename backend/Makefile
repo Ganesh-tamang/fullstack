@@ -15,15 +15,7 @@ help:
 	@echo "generate-configs                   -- generate nginx and gunicorn configs"
 	@echo "copy-configs                       -- copy configs to respective directory"
 	@echo "remove-configs                     -- remove generated configs"
-	
-	@echo
-	@echo "#####FRONTEND COMMANDS #####"
-	@echo	
-	@echo "fe-install                            -- install frontend dependencies"
-	@echo "fe-lint                               -- lint frontend"
-	@echo "fe-format                             -- format frontend"
-	@echo "fe-dev                                -- start frontend development server"
-	@echo "fe-build                              -- build frontend"
+
 
 
 # Backend
@@ -68,20 +60,3 @@ remove-configs:
 seed-dev-data:
 	uv run python backend/manage.py seed_dev_data
 
-# Frontend
-
-fe-install:
-	cd frontend && yarn install
-
-fe-lint:
-	cd frontend && yarn lint
-
-fe-format:
-	cd frontend && yarn format
-
-fe-dev:
-	cd frontend && yarn dev
-
-.PHONY: build
-fe-build:
-	cd frontend && yarn build
