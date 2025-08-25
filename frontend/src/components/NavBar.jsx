@@ -34,7 +34,7 @@ export default function Navbar() {
       ) : (
         <>
           <span className="mr-auto font-semibold"> Hi, {username}</span>
-          <Link to="/posts">Posts</Link>
+          <Link to="/">Posts</Link>
           <Link to="/create-post">Create Post</Link>
           <button
             onClick={handleLogout}

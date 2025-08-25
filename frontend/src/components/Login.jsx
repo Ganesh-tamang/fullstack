@@ -27,7 +27,7 @@ export default function Login() {
 
       if (data.access && data.refresh) {
         dispatch(setTokens({ access: data.access, refresh: data.refresh, username: data.username }));
-        navigate("/posts"); 
+        navigate("/"); 
       } else {
         setError(data.detail || "Invalid email or password"); 
       }
