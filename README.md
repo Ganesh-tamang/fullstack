@@ -18,6 +18,7 @@ uv python install 3.12
 
 After installing run the following commands to get things up and going 😉:
 
+`cd backend`
 1. `make install` - install all the required python packages
 2. create `.env` file in the project root with necessary configs following `.env.example` file
 3. `make collect-static` - using gunicorn in development as well
@@ -43,6 +44,7 @@ npm install --global yarn
 
 After installing run the following commands to the get development server 😉:
 
+`cd frontend`
 1. `make fe-install` - install all the require node packages
 2. `make fe-dev` - start frontend development server
 
