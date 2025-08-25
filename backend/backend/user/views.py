@@ -47,18 +47,18 @@ def create_post(request):
 
         if not title or not content:
             return JsonResponse({"detail": "Title and content are required"}, status=400)
-        user = User.objects.get(username=request.user.username)
+        user = User.objects.get(username=data.get("author"))
         post = Post.objects.create(
             title=title,
             content=content,
-            author=user.id,  
+            author=user,  
         )
 
         return JsonResponse({
             "id": post.id,
             "title": post.title,
             "content": post.content,
-            "author": request.user.username,
+            "author": user.username,
             "created_at": post.created_at,
         }, status=201)
 

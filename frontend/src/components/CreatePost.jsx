@@ -35,7 +35,7 @@ export default function CreatePost() {
         return;
       }
 
-      navigate("/posts");
+      navigate("/");
     } catch (err) {
       setError("Something went wrong. Please try again.");
     }
